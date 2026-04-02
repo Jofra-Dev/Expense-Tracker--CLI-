@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "type": "entry",
+        "category": "food",
+        "name": "Chicken",
+        "value": 100,
+        "date": "07-25-2026"
+    },
+    {
+        "id": 2,
+        "type": "Entry",
+        "category": "Important",
+        "name": "Salary",
+        "value": 5000,
+        "date": "04-02-2026"
+    },
+    {
+        "id": 3,
+        "type": "entry",
+        "category": "tope",
+        "name": "Poooo",
+        "value": 3456,
+        "date": "07-02-2026"
+    }
+]
