@@ -34,7 +34,7 @@ financial advisor integration.
 ### Clone the repository:
 
 ``` bash
-git clone https://github.com/youruser/expense-tracker-cli.git
+git clone https://github.com/Jofra-Dev/expense-tracker-cli.git
 cd expense-tracker-cli
 ```
 
