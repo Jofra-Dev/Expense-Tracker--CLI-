@@ -1,0 +1,13 @@
+# Sensitive data
+.env
+
+# Python environment and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Local databases (optional, if you don't want to share your expenses)
+finances.json
