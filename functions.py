@@ -1,14 +1,34 @@
 import json
 from pathlib import Path
 from datetime import datetime
+import os
+import platform
 
 BASE_DIR = Path(__file__).parent
 json_path = BASE_DIR / Path('finances.json')
 
 
 def show_relatory():
-    print(read_json())
+    clear()
+    data = read_json()
+
+    if not data:
+        print("\n--- No records found. ---")
+        return
+
+    header = f"{'ID':<4} | {'NAME':<20} | {'CATEGORY':<15} | {'TYPE':<10} | {'VALUE':<10} | {'DATE':<12}"
+        
+    print("\n" + "=" * len(header))
+    print(header)
+    print("-" * len(header))
+        
+    for d in data:
+        print(f"{d['id']:<4} | {d['name']:<20} | {d['category']:<15} | {d['type']:<10} | ${d['value']:>8.2f} | {d['date']:<12}")
+        
+    print("=" * len(header) + "\n")
+
     
+
 def add_launch(name, value, type,category, date):
     data = read_json()
 
@@ -25,7 +45,7 @@ def add_launch(name, value, type,category, date):
 
     with open(json_path, 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=4, ensure_ascii=False)
-            print("Added")
+            
 
 def remove_launch(id):
     data = read_json()
@@ -41,7 +61,8 @@ def remove_launch(id):
          print("num tem")        
 
 def edit_launch(id,name, type, value, category, date):
-    
+
+
     data = read_json()
     data_len = len(data)
     index = None
@@ -112,3 +133,11 @@ def reorder_by_category():
     data = reorder_data_index(data)
     with open(json_path, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
+
+
+def clear():
+    
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')

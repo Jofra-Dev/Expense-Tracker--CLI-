@@ -9,18 +9,10 @@
     },
     {
         "id": 2,
-        "type": "Entry",
-        "category": "Important",
-        "name": "Salary",
-        "value": 5000,
-        "date": "04-02-2026"
-    },
-    {
-        "id": 3,
-        "type": "entry",
-        "category": "tope",
-        "name": "Poooo",
-        "value": 3456,
-        "date": "07-02-2026"
+        "type": "Expense",
+        "category": "ERERE",
+        "name": "GHGHGHGHG",
+        "value": 24334.0,
+        "date": "01-01-2012"
     }
 ]
